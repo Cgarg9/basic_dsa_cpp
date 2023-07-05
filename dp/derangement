@@ -74,7 +74,7 @@ int derangementTab(int n)
 
     for (int i = 3; i <= n; i++)
     {
-        dp[i] = (i - 1) * (dp[i - 1] + dp[i - 2]);
+        dp[i] = ((i - 1) * dp[i - 1]) + dp[i - 2];
     }
     return dp[n];
 }
@@ -105,7 +105,7 @@ int derangementTabOptimised(int n)
     for (int i = 3; i <= n; i++)
     {
         int curr;
-        curr = (i - 1) * (prev1 + prev2);
+        curr = ((i - 1) * prev1) + prev2;
         prev2 = prev1;
         prev1 = curr;
     }
