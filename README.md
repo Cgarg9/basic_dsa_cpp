@@ -14,11 +14,35 @@ This repository serves as a collection of C++ implementations of essential data 
 
 The repository is organized into different folders based on the type of data structure or algorithm. Here's a brief overview of the directory structure:
 
-- **/arrays**: Code for array-based data structures and algorithms.
-- **/linked_lists**: Implementation of linked list data structures.
-- **/trees**: Binary trees, AVL trees, and other tree-based structures.
-- **/sorting**: Various sorting algorithms like bubble sort, quicksort, mergesort, etc.
+- **/BST**: Code for binary search tree data structure and algorithms.
+- **/Backtracking**: Questions related to backtracking algorithm.
+- **/Miscellaneous**: Miscellaneous algorithms and data structures.
+- **/dp**: Solutions to problems using dynamic programming.
+- **/graph**: Graph data structures and algorithms.
+- **/heap**:  Heap data structures and algorithms.
+- **/linkedList**: Implementation of linked list data structures.
+- **/queue**: Implementation of queue data structure.
 - **/searching**: Code for searching algorithms such as binary search.
-- **/graphs**: Graph data structures and algorithms.
-- **/dynamic_programming**: Solutions to problems using dynamic programming.
-- **/miscellaneous**: Miscellaneous algorithms and data structures.
+- **/segmentTrees**: Implementation of segment trees and questions.
+- **/sorting**: Various sorting algorithms like bubble sort, quicksort, mergesort, etc.
+- **/stack**: Implementation of stack and some questions.
+- **/tree**: Binary trees, AVL trees, and other tree-based structures.
+- **/trie**: Implementation of trie data structure and a few questions including Huffman Encoder.
+
+Feel free to explore each directory for specific implementations.
+
+## How to Use
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/dsa-cpp.git
+
+Navigate to the directory of the specific data structure or algorithm you are interested in.
+Open the C++ file in your preferred editor or IDE.
+Compile and run the code.
+
+Feel free to modify and integrate the code into your projects or use it for educational purposes.
+
+## Contributing
+If you'd like to contribute to this project, feel free to fork the repository and submit a pull request. Make sure to follow the contributing guidelines. 
