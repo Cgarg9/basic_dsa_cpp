@@ -35,28 +35,51 @@ class Solution
 };
 --------------------------------------------------------------------------------------------------------------------------------------------------------
   min heap
-class Solution
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define endl '\n'
+void dijkstra(vector<pair<int, int>> adjList[], vector<int> &dist, int src)
 {
-	public:
-	//Function to find the shortest distance of all the vertices
-    //from the source vertex S.
-    vector <int> dijkstra(int V, vector<vector<int>> adj[], int S)
+    dist[src] = 0;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    // weight, vertex
+    pq.push({0, src});
+    while (!pq.empty())
     {
-        vector<int> ans(V, INT_MAX);
-        ans[S] = 0;
-        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
-        pq.push({0, S});
-        while (!pq.empty()) {
-            int nodeDist = pq.top().first;
-            int node = pq.top().second;
-            pq.pop();
-            for (auto x : adj[node]) {
-                if (nodeDist + x[1] < ans[x[0]]) {
-                    ans[x[0]] = nodeDist + x[1];
-                    pq.push({ans[x[0]], x[0]});
-                }
+        int wt = pq.top().first;
+        int u = pq.top().second;
+        pq.pop();
+        for (auto node : adjList[u])
+        {
+            int v = node.first;
+            int edgeWeight = node.second;
+            if (dist[v] > wt + edgeWeight)
+            {
+                dist[v] = wt + edgeWeight;
+                pq.push({wt + edgeWeight, v});
             }
         }
-        return ans;
     }
-};
+}
+int main()
+{
+    int n, m, src;
+    cin >> n >> m >> src;
+    vector<pair<int, int>> adjList[n];
+    for (int i = 0; i < m; i++)
+    {
+        int u, v, w;
+        cin >> u >> v >> w;
+        adjList[u].push_back({v, w});
+        // adjList[v].push_back({u, w});
+    }
+    vector<int> dist(n, INT_MAX);
+    dijkstra(adjList, dist, src);
+    for (int i = 0; i < dist.size(); i++)
+    {
+        cout << dist[i] << endl;
+    }
+    return 0;
+}
