@@ -36,7 +36,7 @@ Feel free to explore each directory for specific implementations.
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/dsa-cpp.git
+   git clone https://github.com/Cgarg9/basic_dsa_cpp.git
 
 Navigate to the directory of the specific data structure or algorithm you are interested in.
 Open the C++ file in your preferred editor or IDE.
