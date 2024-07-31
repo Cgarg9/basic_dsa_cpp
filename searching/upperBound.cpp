@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
 public:
-    int lowerBound(vector<int> &nums, int k)
+    int upperBound(vector<int> &nums, int k)
     {
         int low = 0;
         int high = nums.size() - 1;
@@ -14,13 +14,13 @@ public:
         while (low <= high)
         {
             int mid = (high - low) / 2 + low;
-            if (nums[mid] == k)
-                return nums[mid];
-            else if (nums[mid] > k)
-                high = mid - 1;
-            else
+            if (nums[mid] > k)
             {
                 ans = nums[mid];
+                high = mid - 1;
+            }
+            else
+            {
                 low = mid + 1;
             }
         }
@@ -36,6 +36,6 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> nums[i];
     Solution obj;
-    cout << obj.lowerBound(nums, k);
+    cout << obj.upperBound(nums, k);
     return 0;
 }
