@@ -1,3 +1,8 @@
+// frog is at index 0 and needs to got to the last index
+// can jump forward by 1 or 2 steps;
+// energy spent is the difference of values at the two indices
+// return min energy spent
+
 #include <bits/stdc++.h>
 using namespace std;
 #define endl "\n";
